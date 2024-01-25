@@ -1,9 +1,9 @@
-# Maven-Springboot-Starter-Template
+## Developer Playbook
 
-## About
-
-* Group ID: `pkg` - All source files should be in `src/main/java/pkg` and test files should be in `src/test/java/pkg`
-* Artifact ID: Jars/Wars would be created with this name - `test`
-
-These values can be configured in pom.xml file but remember to make necessary changes in folder structure.
-
+```sh
+mvn clean package
+# Build Image with Dockerfile
+docker build -t <tag> .
+# Build Image with Spring Boot
+mvn spring-boot:build-image
+```
