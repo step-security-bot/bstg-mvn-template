@@ -70,5 +70,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: BnP Docker Image
         run: |
-          docker build -t ghcr.io/${{ github.repository }} .
-          docker push ghcr.io/${{ github.repository }}
+          docker build -t ghcr.io/nishkarshraj/bstg-mvn-template .
+          docker push ghcr.io/nishkarshraj/bstg-mvn-template
