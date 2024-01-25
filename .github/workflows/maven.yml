@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@1b05615854632b887b69ae1be8cbefe72d3ae423 # v2.6.0
+        with:
+          egress-policy: audit
       - uses: actions/checkout@v3
         name: Checkout Repository in GH Runner Context
       - name: Set up JDK 17 - Cache Enabled
@@ -31,6 +35,10 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@1b05615854632b887b69ae1be8cbefe72d3ae423 # v2.6.0
+        with:
+          egress-policy: audit
       - uses: actions/checkout@v4
         name: Checkout Repository in GH Runner Context
       - name: Set up JDK 17 - Cache Enabled
